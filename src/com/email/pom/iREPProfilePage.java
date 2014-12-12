@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class iREPPasswordResetPage
+public class iREPProfilePage
 {
 	private WebDriver driver;
 	
@@ -18,6 +18,14 @@ public class iREPPasswordResetPage
 	
 	@FindBy(id="ManageUsers_font")
 	private WebElement Users;
+	
+	@FindBy(id="EnhancedProfiles_font")
+	private WebElement Profiles;
+	
+	@FindBy(xpath= "//td[@id='topButtonRow']/input[@value='View Users']")
+	private WebElement ViewUsers;
+	
+	
 	
 	@FindBy(xpath="//*[@id='topButtonRow']/input[@type=('button') and @name='edit']")
 	private WebElement Edit;
@@ -37,19 +45,25 @@ public class iREPPasswordResetPage
 	@FindBy(xpath="//*[@id='topButtonRow']/input[@type=('submit') and @title=('Save')]")
 	private WebElement Save;
 	
-	public iREPPasswordResetPage(WebDriver driver)
+	public iREPProfilePage(WebDriver driver)
 	{
 		PageFactory.initElements(driver,this);
 		this.driver=driver;
 	}
 	
-	public void reset(String un, String email) throws InterruptedException
+	public void reset(String un, String email, String ProfName) throws InterruptedException
 	{
+		
 		Setup.click();
 		ManageUsers.click();
+		Profiles.click();
+		driver.findElement(By.xpath("//a[contains(text(), '"+un+"')]")).click();
+		
+	
+		
 		Users.click();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//a[contains(text(), '"+un+"')]")).click();
+		driver.findElement(By.xpath("//span[contains(text(), '"+ProfName+"')]")).click();
 		Edit.click();
 		Email.clear();
 		Email.sendKeys(email);

@@ -30,8 +30,8 @@ public class PasswordReset extends iREPSuperTestNG
 		
 		String newPWD = ExcelLib.getCellValue(xlPath,"Password Reset", 1, 6);
 		
-//		loginPage.login(iREPUname, iREPpassword);
-//		passwordReset.reset(PrfoUname, iREPeMAil);
+		loginPage.login(iREPUname, iREPpassword);
+		passwordReset.reset(PrfoUname, iREPeMAil);
 		
 		EmailLoginPage emailLogin = new EmailLoginPage (driver);
 		emailLogin.login(eMailUname, eMailpassword);

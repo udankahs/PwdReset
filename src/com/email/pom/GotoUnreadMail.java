@@ -1,5 +1,6 @@
 package com.email.pom;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,22 +31,35 @@ public class GotoUnreadMail  {
 		this.driver=driver;
 	}
 
-	public void gotoUnreadMail(String pwd) 
+	public void gotoUnreadMail(String pwd) throws InterruptedException 
 	{
 		unread.click();
 		String url = pswRestLink.getText();
 		System.out.println(url);
-		driver.get(url);
-		enterPWD.sendKeys(pwd);
-		reEnterPWD.sendKeys(pwd);
-		Save.click();
-		
-		String title = driver.getTitle();
-		System.out.println(title);
-		
-		if(title.equals("salesforce.com - Developer Edition"))
+		Thread.sleep(5000);
+		pswRestLink.click();
+		try
 		{
-			System.out.println("Login succsfull. Password has been reset succesfully");
+			enterPWD.sendKeys(pwd);
+			reEnterPWD.sendKeys(pwd);
+			Save.click();
+			
+			String title = driver.getTitle();
+			System.out.println(title);
+			
+			if(title.equals("salesforce.com - Developer Edition"))
+			{
+				System.out.println("Login succsfull. Password has been reset succesfully");
+			}
+			
+			driver.quit();
+		}
+		catch (NoSuchElementException e)
+		{
+			if(driver.getTitle().equals("salesforce.com - Customer Secure Login Page"))
+			{
+				System.out.println("The Link Expired");
+			}
 		}
 	}
 }
