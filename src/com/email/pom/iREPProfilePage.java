@@ -25,8 +25,6 @@ public class iREPProfilePage
 	@FindBy(xpath= "//td[@id='topButtonRow']/input[@value='View Users']")
 	private WebElement ViewUsers;
 	
-	
-	
 	@FindBy(xpath="//*[@id='topButtonRow']/input[@type=('button') and @name='edit']")
 	private WebElement Edit;
 	
