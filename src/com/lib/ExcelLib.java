@@ -1,16 +1,7 @@
 package com.lib;
 
-import java.io.BufferedInputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.InputStream;
-
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -50,21 +41,16 @@ public class ExcelLib
 		}
 	}
 	
-	public static void writeExcel(String output_Path,String sheetName, int roww, int coll,String Valuee)throws Exception
-	{	//Excel Path
-		InputStream input = new BufferedInputStream(new FileInputStream(output_Path));
-		POIFSFileSystem fs = new POIFSFileSystem( input );
-		//Excel Workbook 
-	    HSSFWorkbook wb = new HSSFWorkbook(fs);
-	    //Excel Workbook Sheet
-	    HSSFSheet sheet1 = wb.getSheet(sheetName);
-	    HSSFRow rowheadSearchCriteria = sheet1.createRow((short) roww);
-        @SuppressWarnings("deprecation")
-		HSSFCell cell_0 = rowheadSearchCriteria.createCell((short) coll);
-        cell_0.setCellValue(Valuee);
-	    FileOutputStream outFile =new FileOutputStream(new File(output_Path)); 
-		wb.write(outFile);
-		outFile.close(); 
+	public static void writeExcel(String output_Path,String sheetName, int roww, int coll, String Valuee)throws Exception
+	{	
+		FileInputStream fis = new FileInputStream(output_Path);
+		Workbook wb = WorkbookFactory.create(fis);
+		FileOutputStream file1 = new FileOutputStream(output_Path);
+		Sheet s1 = wb.getSheet(sheetName);
+		org.apache.poi.ss.usermodel.Row rownum1 = s1.getRow(roww);
+		rownum1.createCell(coll).setCellValue(Valuee);
+		wb.write(file1);
+		file1.close();
 	}
 	public static int getColCount(String xlPath,String sheetName, int row)
 	{

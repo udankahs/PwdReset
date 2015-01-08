@@ -19,6 +19,9 @@ public class GotoUnreadMail  {
 	@FindBy(xpath = "//span[contains(text(), 'Subject Sandbox: Salesforce.com password confirmation')]/../../..")
 	private WebElement FirstMail;
 	
+	@FindBy(xpath = "//span[@autoid='_o365c_4' and contains(text(), 'mark as read')]")
+	private WebElement MarkAsRead;
+	
 	@FindBy(xpath = "//a[1]")
 	private WebElement pswRestLink;
 	
@@ -40,20 +43,20 @@ public class GotoUnreadMail  {
 	public void gotoUnreadMail(String pwd) throws InterruptedException 
 	{
 		unread.click();
-		String winHandleBefore = driver.getWindowHandle();
+		//String winHandleBefore = driver.getWindowHandle();
 		WebDriverWait wait = new WebDriverWait(driver, 20); //here, wait time is 20 seconds
 		wait.until(ExpectedConditions.visibilityOf(FirstMail));
 		Actions action = new Actions(driver);
-		action.moveToElement(FirstMail).doubleClick().build().perform();
-		for(String winHandle : driver.getWindowHandles()){
-		    driver.switchTo().window(winHandle);
-		    
-		}
+//		for(String winHandle : driver.getWindowHandles()){
+//		    driver.switchTo().window(winHandle);
+//		}
 		String url = pswRestLink.getText();
+		action.moveToElement(FirstMail).contextClick().build().perform();
+		MarkAsRead.click();
 	    System.out.println(url);
 	    Thread.sleep(5000);
-		driver.close();
-		driver.switchTo().window(winHandleBefore);
+//		driver.close();
+		//driver.switchTo().window(winHandleBefore);
 		driver.get(url);
 		try
 		{

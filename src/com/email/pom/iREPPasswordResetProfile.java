@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.lib.ExcelLib;
-
 public class iREPPasswordResetProfile
 {
 	private WebDriver driver;
@@ -80,8 +78,8 @@ public class iREPPasswordResetProfile
 		
 		Email.clear();
 		Email.sendKeys(email);
-		String username = Username.getText();
-				
+		String username = Username.getAttribute("value");
+		System.out.println(username);
 		PasswordResetCheckbox.click();
 		Save.click();
 		userNavLabel.click();

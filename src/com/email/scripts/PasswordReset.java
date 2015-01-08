@@ -37,11 +37,11 @@ public class PasswordReset extends iREPSuperTestNG
 
 			EmailLoginPage emailLogin = new EmailLoginPage(driver);
 			emailLogin.login(eMailUname, eMailpassword);
-
-			GotoUnreadMail unRead = new GotoUnreadMail(driver);
-			unRead.gotoUnreadMail(newPWD);
 			
 			ExcelLib.writeExcel(xlPath, "Password Reset", i, 7, username);
+			
+			GotoUnreadMail unRead = new GotoUnreadMail(driver);
+			unRead.gotoUnreadMail(newPWD);
 		}
 		driver.quit();
 	}
