@@ -49,6 +49,11 @@ public class iREPPasswordResetProfile
 	@FindBy(xpath="//*[@id='topButtonRow']/input[@type=('submit') and @title=('Save')]")
 	private WebElement Save;
 	
+	@FindBy(xpath="//*[@id='topButtonRow']/input[@value='Cancel']")
+	private WebElement Cancel;
+	
+	String username;
+	
 	public iREPPasswordResetProfile(WebDriver driver)
 	{
 		PageFactory.initElements(driver,this);
@@ -65,26 +70,51 @@ public class iREPPasswordResetProfile
 		ViewUsers.click();
 		Thread.sleep(5000);
 		
-		if(ActiveCheckBox.getAttribute("title").equals("Checked"))
-		{
-			ActiveUserEdit.click();
+		int r=2;
+		do{
+			String xpath1 = "//*[@id='ResetForm']/div[2]/table/tbody/tr["+r+"]/td[6]/img";
+			System.out.println(xpath1);
+			driver.findElement(By.xpath(xpath1)).click();
+			
+			if(driver.findElement(By.xpath("//*[@id='ResetForm']/div[2]/table/tbody/tr["+r+"]/td[6]/img")).getAttribute("title").equals("Checked"))
+			{
+				driver.findElement(By.xpath("//*[@id='ResetForm']/div[2]/table/tbody/tr["+r+"]/td[1]/a[contains(text(),'Edit')]")).click();
+//				if (Email.getAttribute("value").equalsIgnoreCase("udanka.h.satyanarayana@abbvie.com"))					
+//				{
+//					Cancel.click();
+//					r++;
+//				}
+				if (Email.getAttribute("value").equalsIgnoreCase("mraj@abbvie.com"))					
+				{
+					Cancel.click();
+					r++;
+				}
+				else if (Email.getAttribute("value").equalsIgnoreCase("suhas.oak@abbvie.com"))					
+				{
+					Cancel.click();
+					r++;
+				}
+				
+				else
+				{
+					Email.clear();
+					Email.sendKeys(email);
+					username = Username.getAttribute("value");
+					PasswordResetCheckbox.click();
+					Save.click();
+					userNavLabel.click();
+					Logout.click();
+					Thread.sleep(5000);
+					r=5;
+				}
+			}
+			else
+			{
+				ActiveHeader.click();
+			}
 		}
-		
-		else
-		{
-			ActiveHeader.click();
-			ActiveUserEdit.click();
-		}
-		
-		Email.clear();
-		Email.sendKeys(email);
-		String username = Username.getAttribute("value");
+		while (r<5);
 		System.out.println(username);
-		PasswordResetCheckbox.click();
-		Save.click();
-		userNavLabel.click();
-		Logout.click();
-		Thread.sleep(5000);
 		return username;
 	}
 }

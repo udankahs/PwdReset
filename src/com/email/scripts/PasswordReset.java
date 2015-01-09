@@ -17,20 +17,21 @@ public class PasswordReset extends iREPSuperTestNG
 		iREPPasswordResetProfile passwordReset = new iREPPasswordResetProfile(driver);
 
 		String xlPath = "D:/Selenium/test data/test data_Final.xls";
-		int rowCount = ExcelLib.getRowCount(xlPath, "Password Reset");
+		String sheetName = "Password Reset";
+		int rowCount = ExcelLib.getRowCount(xlPath, sheetName);
 
 		for (int i = 1; i <= rowCount; i++) 
 		{
-			String iREPUname = ExcelLib.getCellValue(xlPath, "Password Reset",i, 0);
-			String iREPpassword = ExcelLib.getCellValue(xlPath,	"Password Reset", i, 1);
+			String iREPUname = ExcelLib.getCellValue(xlPath, sheetName ,i, 0);
+			String iREPpassword = ExcelLib.getCellValue(xlPath,	sheetName, i, 1);
 
-			String PrfoUname = ExcelLib.getCellValue(xlPath, "Password Reset",i, 2);
-			String iREPeMAil = ExcelLib.getCellValue(xlPath, "Password Reset",i, 3);
+			String PrfoUname = ExcelLib.getCellValue(xlPath, sheetName, i, 2);
+			String iREPeMAil = ExcelLib.getCellValue(xlPath, sheetName, i, 3);
 
-			String eMailUname = ExcelLib.getCellValue(xlPath, "Password Reset",i, 4);
-			String eMailpassword = ExcelLib.getCellValue(xlPath,"Password Reset", i, 5);
+			String eMailUname = ExcelLib.getCellValue(xlPath, sheetName, i, 4);
+			String eMailpassword = ExcelLib.getCellValue(xlPath,sheetName, i, 5);
 
-			String newPWD = ExcelLib.getCellValue(xlPath, "Password Reset", i,6);
+			String newPWD = ExcelLib.getCellValue(xlPath, sheetName, i,6);
 
 			loginPage.login(iREPUname, iREPpassword);
 			String username = passwordReset.reset(PrfoUname, iREPeMAil);
@@ -38,10 +39,10 @@ public class PasswordReset extends iREPSuperTestNG
 			EmailLoginPage emailLogin = new EmailLoginPage(driver);
 			emailLogin.login(eMailUname, eMailpassword);
 			
-			ExcelLib.writeExcel(xlPath, "Password Reset", i, 7, username);
-			
 			GotoUnreadMail unRead = new GotoUnreadMail(driver);
 			unRead.gotoUnreadMail(newPWD);
+			
+			ExcelLib.writeExcel(xlPath, sheetName, i, 7, username);
 		}
 		driver.quit();
 	}

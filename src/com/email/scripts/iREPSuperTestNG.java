@@ -15,7 +15,7 @@ public class iREPSuperTestNG
 	public void preCondition()
 	{
 		driver=new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(6,TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.MINUTES);
 	}
 //	@AfterMethod
 //	public void postCondition()
