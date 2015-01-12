@@ -48,5 +48,4 @@ public class PasswordReset extends iREPSuperTestNG
 		}
 		driver.quit();
 	}
-
 }

@@ -106,7 +106,7 @@ public class iREPPasswordResetProfile
 					userNavLabel.click();
 					Logout.click();
 					Thread.sleep(5000);
-					r=5;
+					r=9;
 				}
 			}
 			else
@@ -114,8 +114,8 @@ public class iREPPasswordResetProfile
 				ActiveHeader.click();
 			}
 		}
-		while (r<5);
-		System.out.println(username);
+		while (r<9);
+		//System.out.println(username);
 		return username;
 	}
 }
