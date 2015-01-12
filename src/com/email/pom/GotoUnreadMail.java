@@ -47,7 +47,8 @@ public class GotoUnreadMail {
 		this.driver = driver;
 	}
 
-	public void gotoUnreadMail(String pwd) throws InterruptedException {
+	public String gotoUnreadMail(String pwd, String newUser) throws InterruptedException 
+	{
 		unread.click();
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 
@@ -59,7 +60,6 @@ public class GotoUnreadMail {
 		action.moveToElement(FirstMail).contextClick().build().perform();
 
 		MarkAsRead.click();
-		System.out.println(url);
 		Thread.sleep(5000);
 		Menu.click();
 		Logout.click();
@@ -72,6 +72,7 @@ public class GotoUnreadMail {
 		if (title.equals("salesforce.com - Customer Secure Login Page")) 
 		{
 			System.out.println("The Link Expired.");
+			newUser = "NA";
 		} 
 		else if (title.equals("Scheduled Improvements @ salesforce.com")) 
 		{
@@ -79,14 +80,17 @@ public class GotoUnreadMail {
 			enterPWD.sendKeys(pwd);
 			reEnterPWD.sendKeys(pwd);
 			Save.click();
-			System.out.println("Login succsfull. Password has been reset succesfully");
+			Thread.sleep(6000);
+			System.out.println("Login succsfull. Password has been reset succesfully for "+ newUser);
 		} 
 		else if (title.equals("salesforce.com - Change Password")) 
 		{
 			enterPWD.sendKeys(pwd);
 			reEnterPWD.sendKeys(pwd);
 			Save.click();
-			System.out.println("Login succsfull. Password has been reset succesfully");
+			Thread.sleep(6000);
+			System.out.println("Login succsfull. Password has been reset succesfully for "+ newUser);
 		}
+		return newUser;
 	}
 }

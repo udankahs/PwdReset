@@ -73,7 +73,6 @@ public class iREPPasswordResetProfile
 		int r=2;
 		do{
 			String xpath1 = "//*[@id='ResetForm']/div[2]/table/tbody/tr["+r+"]/td[6]/img";
-			System.out.println(xpath1);
 			driver.findElement(By.xpath(xpath1)).click();
 			
 			if(driver.findElement(By.xpath("//*[@id='ResetForm']/div[2]/table/tbody/tr["+r+"]/td[6]/img")).getAttribute("title").equals("Checked"))
@@ -102,6 +101,8 @@ public class iREPPasswordResetProfile
 					username = Username.getAttribute("value");
 					PasswordResetCheckbox.click();
 					Save.click();
+					Thread.sleep(6000);
+					
 					userNavLabel.click();
 					Logout.click();
 					Thread.sleep(5000);
