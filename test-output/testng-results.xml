@@ -2,36 +2,52 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1256300" started-at="2015-01-12T10:55:58Z" finished-at="2015-01-12T11:16:54Z">
+  <suite name="Default suite" duration-ms="1027292" started-at="2015-01-13T11:38:20Z" finished-at="2015-01-13T11:55:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1256300" started-at="2015-01-12T10:55:58Z" finished-at="2015-01-12T11:16:54Z">
+    <test name="Default test" duration-ms="1027292" started-at="2015-01-13T11:38:20Z" finished-at="2015-01-13T11:55:27Z">
       <class name="com.email.scripts.PasswordReset">
-        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.PasswordReset@1666ada]" name="preCondition" is-config="true" duration-ms="23111" started-at="2015-01-12T16:25:58Z" finished-at="2015-01-12T16:26:21Z">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.PasswordReset@1955dd4]" name="preCondition" is-config="true" duration-ms="27064" started-at="2015-01-13T17:08:20Z" finished-at="2015-01-13T17:08:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="FAIL" signature="testPasswordReset()[pri:0, instance:com.email.scripts.PasswordReset@1666ada]" name="testPasswordReset" duration-ms="1232967" started-at="2015-01-12T16:26:21Z" finished-at="2015-01-12T16:46:54Z">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method status="FAIL" signature="testPasswordReset()[pri:0, instance:com.email.scripts.PasswordReset@1955dd4]" name="testPasswordReset" duration-ms="1000150" started-at="2015-01-13T17:08:47Z" finished-at="2015-01-13T17:25:27Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Timed out after 20 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (134f093c-dc3b-4b60-bb1e-d5335beb02fa)] -> xpath: //span[contains(text(), 'Subject Sandbox: Salesforce.com password confirmation')]/../../..]
+              <![CDATA[Unable to locate element: {"method":"id","selector":"input_1"}
+Command duration or timeout: 601.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'PC169030', ip: '169.254.195.253', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: 134f093c-dc3b-4b60-bb1e-d5335beb02fa
+System info: host: 'PC169030', ip: '10.226.156.166', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
+Session ID: 8287078d-c615-48f1-a587-575b4fab12a8
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=34.0.5}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (134f093c-dc3b-4b60-bb1e-d5335beb02fa)] -> xpath: //span[contains(text(), 'Subject Sandbox: Salesforce.com password confirmation')]/../../..]
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"input_1"}
+Command duration or timeout: 601.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'PC169030', ip: '169.254.195.253', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: 134f093c-dc3b-4b60-bb1e-d5335beb02fa
+System info: host: 'PC169030', ip: '10.226.156.166', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
+Session ID: 8287078d-c615-48f1-a587-575b4fab12a8
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=34.0.5}]
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:79)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.email.pom.GotoUnreadMail.gotoUnreadMail(GotoUnreadMail.java:55)
-	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:43)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy5.sendKeys(Unknown Source)
+	at com.email.pom.EmailLoginPage.login(EmailLoginPage.java:30)
+	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:77)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -56,44 +72,16 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cs
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(), 'Subject Sandbox: Salesforce.com password confirmation')]/../../.."}
-Command duration or timeout: 600.07 seconds
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"input_1"}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'PC169030', ip: '169.254.195.253', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: 134f093c-dc3b-4b60-bb1e-d5335beb02fa
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=34.0.5}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
-	at com.sun.proxy.$Proxy5.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:227)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$1(ExpectedConditions.java:226)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:213)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 26 more
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(), 'Subject Sandbox: Salesforce.com password confirmation')]/../../.."}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'PC169030', ip: '169.254.195.253', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
+System info: host: 'PC169030', ip: '10.226.156.166', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/266241/AppData/Local/Temp/anonymous8310635572512039745webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/266241/AppData/Local/Temp/anonymous8310635572512039745webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/266241/AppData/Local/Temp/anonymous8986530126628129784webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/266241/AppData/Local/Temp/anonymous8986530126628129784webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPasswordReset -->
