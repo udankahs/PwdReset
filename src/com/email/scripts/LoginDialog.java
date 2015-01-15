@@ -2,9 +2,11 @@ package com.email.scripts;
 
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 import javax.swing.border.*;
 
+@SuppressWarnings("serial")
 public class LoginDialog extends JDialog {
 
 	private JTextField tfUsername;
@@ -51,7 +53,6 @@ public class LoginDialog extends JDialog {
 		btnLogin = new JButton("Login");
 
 		btnLogin.addActionListener(new ActionListener() {
-
 			public void actionPerformed(ActionEvent e) {
 				if (Login.authenticate(getUsername(), getPassword())) {
 					JOptionPane.showMessageDialog(LoginDialog.this, "Hi "
@@ -60,10 +61,12 @@ public class LoginDialog extends JDialog {
 							JOptionPane.INFORMATION_MESSAGE);
 					succeeded = true;
 					dispose();
-				}
-				else 
-				{
-					JOptionPane.showMessageDialog(LoginDialog.this,"Invalid username or password", "Login",	JOptionPane.ERROR_MESSAGE);
+				} else {
+					JOptionPane
+							.showMessageDialog(
+									LoginDialog.this,
+									"Invalid username or password. Contact Tool Admins for (udanka.hs@cognizant.com or manaswi.raj@cognizant.com) Login Details.",
+									"Login", JOptionPane.ERROR_MESSAGE);
 					// reset username and password
 					tfUsername.setText("");
 					pfPassword.setText("");

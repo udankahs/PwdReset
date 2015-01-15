@@ -62,6 +62,10 @@ public class iREPPasswordResetProfile
 	
 	public String reset(String profName, String email) throws InterruptedException
 	{
+		String title = driver.getTitle();
+		
+		if (title.equals("salesforce.com - Unlimited Edition")){
+		
 		userNavLabel.click();
 		Setup.click();
 		ManageUsers.click();
@@ -116,6 +120,12 @@ public class iREPPasswordResetProfile
 		}
 		while (r<9);
 		//System.out.println(username);
+		}
+		else if (title.equals("salesforce.com - Customer Secure Login Page"))
+		{
+			username="NA";
+			driver.quit();
+		}
 		return username;
 	}
 }

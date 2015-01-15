@@ -27,7 +27,6 @@ public class iREPLoginPage
 	public void login(String un,String pw) throws InterruptedException
 	{
 		driver.get("https://test.salesforce.com");
-		
 		unTextBox.sendKeys(un);
 		pwTextBox.sendKeys(pw);
 		loginButton.click();
