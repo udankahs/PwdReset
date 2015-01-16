@@ -55,9 +55,7 @@ public class LoginDialog extends JDialog {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (Login.authenticate(getUsername(), getPassword())) {
-					JOptionPane.showMessageDialog(LoginDialog.this, "Hi "
-							+ getUsername()
-							+ "! You have successfully logged in.", "Login",
+					JOptionPane.showMessageDialog(LoginDialog.this, "Hi SPURP user..!!  You have successfully logged in.", "Login",
 							JOptionPane.INFORMATION_MESSAGE);
 					succeeded = true;
 					dispose();

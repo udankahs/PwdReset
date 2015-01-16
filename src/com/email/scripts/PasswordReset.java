@@ -67,7 +67,7 @@ public class PasswordReset extends iREPSuperTestNG
 			//String iREPUname = ExcelLib.getCellValue(xlPath, sheetName ,i, 0);
 			//String iREPpassword = ExcelLib.getCellValue(xlPath, sheetName, i, 1);
 
-			String PrfoUname = ExcelLib.getCellValue(xlPath, sheetName, i, 2);
+			String PrfoUname = ExcelLib.getCellValue(xlPath, sheetName, i, 0);
 			//String iREPeMAil = ExcelLib.getCellValue(xlPath, sheetName, i, 3);
 
 			//String eMailUname = ExcelLib.getCellValue(xlPath, sheetName, i, 4);
@@ -84,7 +84,7 @@ public class PasswordReset extends iREPSuperTestNG
 			GotoUnreadMail unRead = new GotoUnreadMail(driver);
 			String newUsername = unRead.gotoUnreadMail(newPWD, username);
 			
-			ExcelLib.writeExcel(xlPath, sheetName, i, 7, newUsername);
+			ExcelLib.writeExcel(xlPath, sheetName, i, 1, newUsername);
 			System.out.println();
 			System.out.println("=============================================");
 		}

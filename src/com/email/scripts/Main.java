@@ -11,8 +11,10 @@ import org.testng.TestNG;
 public class Main {
 	public static void main(String[] args) {
 		final JFrame frame = new JFrame("SPURP Tool");
+		JPanel nested1 = new JPanel(new GridLayout(0,1));
+		JPanel nested2 = new JPanel(new GridLayout(1,1));
+		
 		JLabel textLabel = new JLabel("Welcome to SPURP Tool", SwingConstants.CENTER);
-		frame.getContentPane().add(textLabel, BorderLayout.CENTER);
 		final JButton btnLogin = new JButton("Click to login");
 
 		btnLogin.addActionListener(new ActionListener() {
@@ -21,14 +23,12 @@ public class Main {
 				loginDlg.setVisible(true);
 				// if logon successfully
 				if (loginDlg.isSucceeded()) {
-					btnLogin.setText("Hi " + loginDlg.getUsername() + "!");
+					btnLogin.setText("Click Here to Re-Login");
 
 					DetailFieldValues fieldValue = new DetailFieldValues(frame);
 					fieldValue.setVisible(true);
 					// if logon successfully
 					if (fieldValue.isSucceeded()) {
-						fieldValue.setTitle("Hi " + loginDlg.getUsername()
-								+ "!");
 
 						TestListenerAdapter tla = new TestListenerAdapter();
 						TestNG testng = new TestNG();
@@ -37,14 +37,19 @@ public class Main {
 						testng.run();
 					}
 				}
-
 			}
 		});
+		
+		JPanel outer = new JPanel(new BorderLayout());  
+		outer.add(nested1, BorderLayout.CENTER);  
+		outer.add(nested2, BorderLayout.SOUTH); 
+		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(400, 200);
+		frame.setSize(300, 150);
+		nested1.add(textLabel);
 		frame.setLocationRelativeTo(null); 
-		frame.setLayout(new FlowLayout());
-		frame.getContentPane().add(btnLogin);
+		nested2.add(btnLogin, JButton.CENTER);
 		frame.setVisible(true);
+		frame.setContentPane(outer);
 	}
 }

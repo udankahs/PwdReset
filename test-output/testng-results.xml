@@ -2,38 +2,33 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="28342" started-at="2015-01-14T19:16:06Z" finished-at="2015-01-14T19:16:34Z">
+  <suite name="Command line suite" duration-ms="35774" started-at="2015-01-16T11:10:48Z" finished-at="2015-01-16T11:11:24Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="28342" started-at="2015-01-14T19:16:06Z" finished-at="2015-01-14T19:16:34Z">
+    <test name="Command line test" duration-ms="35774" started-at="2015-01-16T11:10:48Z" finished-at="2015-01-16T11:11:24Z">
       <class name="com.email.scripts.PasswordReset">
-        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.PasswordReset@4708a460]" name="preCondition" is-config="true" duration-ms="14647" started-at="2015-01-15T00:46:06Z" finished-at="2015-01-15T00:46:20Z">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.PasswordReset@19bd8b4]" name="preCondition" is-config="true" duration-ms="22707" started-at="2015-01-16T16:40:48Z" finished-at="2015-01-16T16:41:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="FAIL" signature="testPasswordReset()[pri:0, instance:com.email.scripts.PasswordReset@4708a460]" name="testPasswordReset" duration-ms="13655" started-at="2015-01-15T00:46:20Z" finished-at="2015-01-15T00:46:34Z">
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+        <test-method status="FAIL" signature="testPasswordReset()[pri:0, instance:com.email.scripts.PasswordReset@19bd8b4]" name="testPasswordReset" duration-ms="13035" started-at="2015-01-16T16:41:11Z" finished-at="2015-01-16T16:41:24Z">
+          <exception class="org.openqa.selenium.remote.SessionNotFoundException">
             <message>
-              <![CDATA[Error communicating with the remote browser. It may have died.
+              <![CDATA[The FirefoxDriver cannot be used after quit() was called.
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'Udanka', ip: '192.168.1.8', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+System info: host: 'PC169030', ip: '10.236.225.171', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
 Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+              <![CDATA[org.openqa.selenium.remote.SessionNotFoundException: The FirefoxDriver cannot be used after quit() was called.
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'Udanka', ip: '192.168.1.8', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+System info: host: 'PC169030', ip: '10.236.225.171', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
 Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
-	at com.sun.proxy.$Proxy4.click(Unknown Source)
-	at com.email.pom.iREPPasswordResetProfile.reset(iREPPasswordResetProfile.java:65)
-	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:79)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at com.email.pom.EmailLoginPage.login(EmailLoginPage.java:29)
+	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:82)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -55,7 +50,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
 	at org.testng.TestNG.run(TestNG.java:1057)
-	at com.email.scripts.Main$1.actionPerformed(Main.java:35)
+	at com.email.scripts.Main$1.actionPerformed(Main.java:37)
 	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
 	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
 	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
@@ -75,7 +70,7 @@ Driver info: driver.version: RemoteWebDriver
 	at java.awt.Window.dispatchEventImpl(Unknown Source)
 	at java.awt.Component.dispatchEvent(Unknown Source)
 	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
 	at java.awt.EventQueue$3.run(Unknown Source)
 	at java.awt.EventQueue$3.run(Unknown Source)
 	at java.security.AccessController.doPrivileged(Native Method)
@@ -92,38 +87,9 @@ Driver info: driver.version: RemoteWebDriver
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.run(Unknown Source)
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
-	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:318)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:233)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:165)
-	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:362)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
-	... 67 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
-	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:123)
-	... 81 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          </exception> <!-- org.openqa.selenium.remote.SessionNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPasswordReset -->

@@ -87,17 +87,11 @@ public class iREPPasswordResetProfile
 //					Cancel.click();
 //					r++;
 //				}
-				if (Email.getAttribute("value").equalsIgnoreCase("mraj@abbvie.com"))					
+				if (Email.getAttribute("value").equalsIgnoreCase("mraj@abbvie.com") || Email.getAttribute("value").equalsIgnoreCase("suhas.oak@abbvie.com"))					
 				{
 					Cancel.click();
 					r++;
 				}
-				else if (Email.getAttribute("value").equalsIgnoreCase("suhas.oak@abbvie.com"))					
-				{
-					Cancel.click();
-					r++;
-				}
-				
 				else
 				{
 					Email.clear();
