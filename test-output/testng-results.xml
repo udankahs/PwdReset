@@ -2,33 +2,33 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="35774" started-at="2015-01-16T11:10:48Z" finished-at="2015-01-16T11:11:24Z">
+  <suite name="Default suite" duration-ms="54533" started-at="2015-02-05T04:53:05Z" finished-at="2015-02-05T04:54:00Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="35774" started-at="2015-01-16T11:10:48Z" finished-at="2015-01-16T11:11:24Z">
+    <test name="Default test" duration-ms="54533" started-at="2015-02-05T04:53:05Z" finished-at="2015-02-05T04:54:00Z">
       <class name="com.email.scripts.PasswordReset">
-        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.PasswordReset@19bd8b4]" name="preCondition" is-config="true" duration-ms="22707" started-at="2015-01-16T16:40:48Z" finished-at="2015-01-16T16:41:11Z">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.PasswordReset@c42916]" name="preCondition" is-config="true" duration-ms="40437" started-at="2015-02-05T10:23:05Z" finished-at="2015-02-05T10:23:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="FAIL" signature="testPasswordReset()[pri:0, instance:com.email.scripts.PasswordReset@19bd8b4]" name="testPasswordReset" duration-ms="13035" started-at="2015-01-16T16:41:11Z" finished-at="2015-01-16T16:41:24Z">
+        <test-method status="FAIL" signature="testPasswordReset()[pri:0, instance:com.email.scripts.PasswordReset@c42916]" name="testPasswordReset" duration-ms="14029" started-at="2015-02-05T10:23:46Z" finished-at="2015-02-05T10:24:00Z">
           <exception class="org.openqa.selenium.remote.SessionNotFoundException">
             <message>
               <![CDATA[The FirefoxDriver cannot be used after quit() was called.
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'PC169030', ip: '10.236.225.171', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
+System info: host: 'PC169030', ip: '10.236.225.240', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_31'
 Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.remote.SessionNotFoundException: The FirefoxDriver cannot be used after quit() was called.
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'PC169030', ip: '10.236.225.171', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
+System info: host: 'PC169030', ip: '10.236.225.240', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_31'
 Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:359)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
 	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
 	at com.email.pom.EmailLoginPage.login(EmailLoginPage.java:29)
-	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:82)
+	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,43 +50,9 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
 	at org.testng.TestNG.run(TestNG.java:1057)
-	at com.email.scripts.Main$1.actionPerformed(Main.java:37)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$200(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.remote.SessionNotFoundException -->
@@ -94,6 +60,6 @@ Driver info: driver.version: RemoteWebDriver
           </reporter-output>
         </test-method> <!-- testPasswordReset -->
       </class> <!-- com.email.scripts.PasswordReset -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

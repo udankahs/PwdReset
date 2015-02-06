@@ -14,7 +14,7 @@ public class Main {
 		JPanel nested1 = new JPanel(new GridLayout(0,1));
 		JPanel nested2 = new JPanel(new GridLayout(1,1));
 		
-		JLabel textLabel = new JLabel("Welcome to SPURP Tool", SwingConstants.CENTER);
+		final JLabel textLabel = new JLabel("Welcome to SPURP Tool", SwingConstants.CENTER);
 		final JButton btnLogin = new JButton("Click to login");
 
 		btnLogin.addActionListener(new ActionListener() {
@@ -23,12 +23,15 @@ public class Main {
 				loginDlg.setVisible(true);
 				// if logon successfully
 				if (loginDlg.isSucceeded()) {
+					textLabel.setText("In Progress.. Dont close the Window..!");
 					btnLogin.setText("Click Here to Re-Login");
 
 					DetailFieldValues fieldValue = new DetailFieldValues(frame);
 					fieldValue.setVisible(true);
 					// if logon successfully
 					if (fieldValue.isSucceeded()) {
+						
+						btnLogin.setText("Click Here to Re-Login");
 
 						TestListenerAdapter tla = new TestListenerAdapter();
 						TestNG testng = new TestNG();

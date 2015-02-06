@@ -16,6 +16,7 @@ public class iREPSuperTestNG
 	{
 		driver=new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.MINUTES);
+		driver.manage().window().maximize();
 	}
 //	@AfterMethod
 //	public void postCondition()

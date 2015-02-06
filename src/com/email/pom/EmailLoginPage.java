@@ -15,7 +15,7 @@ public class EmailLoginPage
 	@FindBy(id="input_2")
 	private WebElement pwTextBox;
 	
-	@FindBy(xpath="//input[@type=('submit')]")
+	@FindBy(xpath="//input[@class='credentials_input_submit']")
 	private WebElement loginButton;
 	
 	public EmailLoginPage(WebDriver driver)
