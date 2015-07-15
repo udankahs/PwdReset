@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 05 09:26:12 IST 2015</td>
+<td>Started on:</td><td>Wed Jul 15 16:23:47 IST 2015</td>
 </tr>
-<tr><td>Total time:</td><td>293 seconds (293121 ms)</td>
+<tr><td>Total time:</td><td>64 seconds (64330 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,29 +68,56 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.email.scripts.PasswordReset.testPasswordReset()'><b>testPasswordReset</b><br>Test class: com.email.scripts.PasswordReset</td>
-<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+<td title='com.email.scripts.PasswordReset.preCondition()'><b>preCondition</b><br>Test class: com.email.scripts.PasswordReset</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+BUG	checkForChanges
+1436957648852	addons.xpi	DEBUG	Loaded add-on state from prefs: {&quot;app-profile&quot;:{&quot;fxdriver@googlecode.com&quot;:{&quot;d&quot;:&quot;C:\\Users\\266241\\AppData\\Local\\Temp\\anonymous4078652558270429178webdriver-profile\\extensions\\fxdriver@googlecode.com&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;2.44.0&quot;,&quot;st&quot;:1436957629927,&quot;mt&quot;:1436957629557}},&quot;app-global&quot;:{&quot;{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;39.0&quot;,&quot;st&quot;:1435915185598,&quot;mt&quot;:1435915184948}},&quot;winreg-app-global&quot;:{&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Common Files\\McAfee\\SystemCore&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;15.1.0&quot;,&quot;st&quot;:1436929502573,&quot;mt&quot;:1431604857077},&quot;{9F17B1A2-7317-49ef-BCB7-7BB47BDE10F8}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\HP\\Unified Functional Testing\\\\bin\\Mozilla\\Common&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;11.50&quot;,&quot;st&quot;:1431692188849,&quot;mt&quot;:1346917941000}}}
+1436957648853	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1436957648867	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1436957648869	addons.xpi	DEBUG	getInstallState changed: false, state: {&quot;app-profile&quot;:{&quot;fxdriver@googlecode.com&quot;:{&quot;d&quot;:&quot;C:\\Users\\266241\\AppData\\Local\\Temp\\anonymous4078652558270429178webdriver-profile\\extensions\\fxdriver@googlecode.com&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;2.44.0&quot;,&quot;st&quot;:1436957629927,&quot;mt&quot;:1436957629557}},&quot;app-global&quot;:{&quot;{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;39.0&quot;,&quot;st&quot;:1435915185598,&quot;mt&quot;:1435915184948}},&quot;winreg-app-global&quot;:{&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Common Files\\McAfee\\SystemCore&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;15.1.0&quot;,&quot;st&quot;:1436929502573,&quot;mt&quot;:1431604857077},&quot;{9F17B1A2-7317-49ef-BCB7-7BB47BDE10F8}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\HP\\Unified Functional Testing\\\\bin\\Mozilla\\Common&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;11.50&quot;,&quot;st&quot;:1431692188849,&quot;mt&quot;:1346917941000}}}
+1436957648871	addons.xpi	DEBUG	No changes found
+1436957648921	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1436957648922	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1436957648922	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1436957648922	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1436957648922	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1436957648923	addons.manager	DEBUG	Starting provider: GMPProvider
+1436957648928	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1436957648929	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1436957648929	addons.manager	DEBUG	Starting provider: PluginProvider
+1436957648929	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1436957648930	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1436957648930	addons.manager	DEBUG	Completed startup sequence
+1436957649989	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\266241\AppData\Local\Temp\anonymous4078652558270429178webdriver-profile\extensions.json
+1436957650034	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1436957650034	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1436957650035	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1436957651496	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1436957651496	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1436957651497	addons.xpi-utils	DEBUG	Successfully read XPI database
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+JavaScript error: file:///C:/Users/266241/AppData/Local/Temp/anonymous4078652558270429178webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js, line 11487: TypeError: this.server_ is undefined
+JavaScript error: chrome://fxdriver/content/server.js, line 38: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
+
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:02:37&apos;
-System info: host: &apos;PC169030&apos;, ip: &apos;10.236.225.240&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_31&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
-	at com.sun.proxy.$Proxy4.sendKeys(Unknown Source)
-	at com.email.pom.EmailLoginPage.login(EmailLoginPage.java:30)
-	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:83)
-	at com.email.scripts.Main$1.actionPerformed(Main.java:39)
+System info: host: &apos;PC207713&apos;, ip: &apos;10.236.226.237&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:114)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:193)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:186)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:182)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:95)
+	at com.email.scripts.iREPSuperTestNG.preCondition(iREPSuperTestNG.java:17)
+	at com.email.scripts.Main$1.actionPerformed(Main.java:40)
 	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
 	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
 	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
@@ -127,56 +154,88 @@ Driver info: driver.version: RemoteWebDriver
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.run(Unknown Source)
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
-	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:318)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:233)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:165)
-	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:362)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+BUG	checkForChanges
+1436957648852	addons.xpi	DEBUG	Loaded add-on state from prefs: {&quot;app-profile&quot;:{&quot;fxdriver@googlecode.com&quot;:{&quot;d&quot;:&quot;C:\\Users\\266241\\AppData\\Local\\Temp\\anonymous4078652558270429178webdriver-profile\\extensions\\fxdriver@googlecode.com&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;2.44.0&quot;,&quot;st&quot;:1436957629927,&quot;mt&quot;:1436957629557}},&quot;app-global&quot;:{&quot;{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;39.0&quot;,&quot;st&quot;:1435915185598,&quot;mt&quot;:1435915184948}},&quot;winreg-app-global&quot;:{&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Common Files\\McAfee\\SystemCore&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;15.1.0&quot;,&quot;st&quot;:1436929502573,&quot;mt&quot;:1431604857077},&quot;{9F17B1A2-7317-49ef-BCB7-7BB47BDE10F8}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\HP\\Unified Functional Testing\\\\bin\\Mozilla\\Common&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;11.50&quot;,&quot;st&quot;:1431692188849,&quot;mt&quot;:1346917941000}}}
+1436957648853	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1436957648867	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1436957648869	addons.xpi	DEBUG	getInstallState changed: false, state: {&quot;app-profile&quot;:{&quot;fxdriver@googlecode.com&quot;:{&quot;d&quot;:&quot;C:\\Users\\266241\\AppData\\Local\\Temp\\anonymous4078652558270429178webdriver-profile\\extensions\\fxdriver@googlecode.com&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;2.44.0&quot;,&quot;st&quot;:1436957629927,&quot;mt&quot;:1436957629557}},&quot;app-global&quot;:{&quot;{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;39.0&quot;,&quot;st&quot;:1435915185598,&quot;mt&quot;:1435915184948}},&quot;winreg-app-global&quot;:{&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Common Files\\McAfee\\SystemCore&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;15.1.0&quot;,&quot;st&quot;:1436929502573,&quot;mt&quot;:1431604857077},&quot;{9F17B1A2-7317-49ef-BCB7-7BB47BDE10F8}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\HP\\Unified Functional Testing\\\\bin\\Mozilla\\Common&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;11.50&quot;,&quot;st&quot;:1431692188849,&quot;mt&quot;:1346917941000}}}
+1436957648871	addons.xpi	DEBUG	No changes found
+1436957648921	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1436957648922	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1436957648922	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1436957648922	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1436957648922	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1436957648923	addons.manager	DEBUG	Starting provider: GMPProvider
+1436957648928	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1436957648929	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1436957648929	addons.manager	DEBUG	Starting provider: PluginProvider
+1436957648929	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1436957648930	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1436957648930	addons.manager	DEBUG	Completed startup sequence
+1436957649989	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\266241\AppData\Local\Temp\anonymous4078652558270429178webdriver-profile\extensions.json
+1436957650034	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1436957650034	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1436957650035	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1436957651496	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1436957651496	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1436957651497	addons.xpi-utils	DEBUG	Successfully read XPI database
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+JavaScript error: file:///C:/Users/266241/AppData/Local/Temp/anonymous4078652558270429178webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js, line 11487: TypeError: this.server_ is undefined
+JavaScript error: chrome://fxdriver/content/server.js, line 38: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
 	... 67 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
-	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:123)
-	... 81 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace8290883", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace8290883'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace15763270", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace15763270'><pre>org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+BUG	checkForChanges
+1436957648852	addons.xpi	DEBUG	Loaded add-on state from prefs: {&quot;app-profile&quot;:{&quot;fxdriver@googlecode.com&quot;:{&quot;d&quot;:&quot;C:\\Users\\266241\\AppData\\Local\\Temp\\anonymous4078652558270429178webdriver-profile\\extensions\\fxdriver@googlecode.com&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;2.44.0&quot;,&quot;st&quot;:1436957629927,&quot;mt&quot;:1436957629557}},&quot;app-global&quot;:{&quot;{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;39.0&quot;,&quot;st&quot;:1435915185598,&quot;mt&quot;:1435915184948}},&quot;winreg-app-global&quot;:{&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Common Files\\McAfee\\SystemCore&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;15.1.0&quot;,&quot;st&quot;:1436929502573,&quot;mt&quot;:1431604857077},&quot;{9F17B1A2-7317-49ef-BCB7-7BB47BDE10F8}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\HP\\Unified Functional Testing\\\\bin\\Mozilla\\Common&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;11.50&quot;,&quot;st&quot;:1431692188849,&quot;mt&quot;:1346917941000}}}
+1436957648853	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1436957648867	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1436957648869	addons.xpi	DEBUG	getInstallState changed: false, state: {&quot;app-profile&quot;:{&quot;fxdriver@googlecode.com&quot;:{&quot;d&quot;:&quot;C:\\Users\\266241\\AppData\\Local\\Temp\\anonymous4078652558270429178webdriver-profile\\extensions\\fxdriver@googlecode.com&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;2.44.0&quot;,&quot;st&quot;:1436957629927,&quot;mt&quot;:1436957629557}},&quot;app-global&quot;:{&quot;{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;39.0&quot;,&quot;st&quot;:1435915185598,&quot;mt&quot;:1435915184948}},&quot;winreg-app-global&quot;:{&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Common Files\\McAfee\\SystemCore&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;15.1.0&quot;,&quot;st&quot;:1436929502573,&quot;mt&quot;:1431604857077},&quot;{9F17B1A2-7317-49ef-BCB7-7BB47BDE10F8}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\HP\\Unified Functional Testing\\\\bin\\Mozilla\\Common&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;11.50&quot;,&quot;st&quot;:1431692188849,&quot;mt&quot;:1346917941000}}}
+1436957648871	addons.xpi	DEBUG	No changes found
+1436957648921	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1436957648922	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1436957648922	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1436957648922	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1436957648922	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1436957648923	addons.manager	DEBUG	Starting provider: GMPProvider
+1436957648928	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1436957648929	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1436957648929	addons.manager	DEBUG	Starting provider: PluginProvider
+1436957648929	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1436957648930	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1436957648930	addons.manager	DEBUG	Completed startup sequence
+1436957649989	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\266241\AppData\Local\Temp\anonymous4078652558270429178webdriver-profile\extensions.json
+1436957650034	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1436957650034	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1436957650035	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1436957651496	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1436957651496	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1436957651497	addons.xpi-utils	DEBUG	Successfully read XPI database
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+JavaScript error: file:///C:/Users/266241/AppData/Local/Temp/anonymous4078652558270429178webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js, line 11487: TypeError: this.server_ is undefined
+JavaScript error: chrome://fxdriver/content/server.js, line 38: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
+
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:02:37&apos;
-System info: host: &apos;PC169030&apos;, ip: &apos;10.236.225.240&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_31&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
-	at com.sun.proxy.$Proxy4.sendKeys(Unknown Source)
-	at com.email.pom.EmailLoginPage.login(EmailLoginPage.java:30)
-	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:83)
+System info: host: &apos;PC207713&apos;, ip: &apos;10.236.226.237&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:114)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:193)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:186)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:182)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:95)
+	at com.email.scripts.iREPSuperTestNG.preCondition(iREPSuperTestNG.java:17)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -192,7 +251,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
 	at org.testng.TestNG.run(TestNG.java:1057)
-	at com.email.scripts.Main$1.actionPerformed(Main.java:39)
+	at com.email.scripts.Main$1.actionPerformed(Main.java:40)
 	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
 	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
 	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
@@ -229,38 +288,54 @@ Driver info: driver.version: RemoteWebDriver
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.run(Unknown Source)
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
-	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:318)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:233)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:165)
-	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:362)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+BUG	checkForChanges
+1436957648852	addons.xpi	DEBUG	Loaded add-on state from prefs: {&quot;app-profile&quot;:{&quot;fxdriver@googlecode.com&quot;:{&quot;d&quot;:&quot;C:\\Users\\266241\\AppData\\Local\\Temp\\anonymous4078652558270429178webdriver-profile\\extensions\\fxdriver@googlecode.com&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;2.44.0&quot;,&quot;st&quot;:1436957629927,&quot;mt&quot;:1436957629557}},&quot;app-global&quot;:{&quot;{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;39.0&quot;,&quot;st&quot;:1435915185598,&quot;mt&quot;:1435915184948}},&quot;winreg-app-global&quot;:{&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Common Files\\McAfee\\SystemCore&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;15.1.0&quot;,&quot;st&quot;:1436929502573,&quot;mt&quot;:1431604857077},&quot;{9F17B1A2-7317-49ef-BCB7-7BB47BDE10F8}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\HP\\Unified Functional Testing\\\\bin\\Mozilla\\Common&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;11.50&quot;,&quot;st&quot;:1431692188849,&quot;mt&quot;:1346917941000}}}
+1436957648853	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1436957648867	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1436957648869	addons.xpi	DEBUG	getInstallState changed: false, state: {&quot;app-profile&quot;:{&quot;fxdriver@googlecode.com&quot;:{&quot;d&quot;:&quot;C:\\Users\\266241\\AppData\\Local\\Temp\\anonymous4078652558270429178webdriver-profile\\extensions\\fxdriver@googlecode.com&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;2.44.0&quot;,&quot;st&quot;:1436957629927,&quot;mt&quot;:1436957629557}},&quot;app-global&quot;:{&quot;{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}&quot;,&quot;e&quot;:true,&quot;v&quot;:&quot;39.0&quot;,&quot;st&quot;:1435915185598,&quot;mt&quot;:1435915184948}},&quot;winreg-app-global&quot;:{&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\Common Files\\McAfee\\SystemCore&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;15.1.0&quot;,&quot;st&quot;:1436929502573,&quot;mt&quot;:1431604857077},&quot;{9F17B1A2-7317-49ef-BCB7-7BB47BDE10F8}&quot;:{&quot;d&quot;:&quot;C:\\Program Files\\HP\\Unified Functional Testing\\\\bin\\Mozilla\\Common&quot;,&quot;e&quot;:false,&quot;v&quot;:&quot;11.50&quot;,&quot;st&quot;:1431692188849,&quot;mt&quot;:1346917941000}}}
+1436957648871	addons.xpi	DEBUG	No changes found
+1436957648921	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1436957648922	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1436957648922	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1436957648922	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1436957648922	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1436957648923	addons.manager	DEBUG	Starting provider: GMPProvider
+1436957648928	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1436957648929	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1436957648929	addons.manager	DEBUG	Starting provider: PluginProvider
+1436957648929	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1436957648930	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1436957648930	addons.manager	DEBUG	Completed startup sequence
+1436957649989	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\266241\AppData\Local\Temp\anonymous4078652558270429178webdriver-profile\extensions.json
+1436957650034	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1436957650034	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1436957650035	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1436957651496	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1436957651496	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1436957651497	addons.xpi-utils	DEBUG	Successfully read XPI database
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+JavaScript error: file:///C:/Users/266241/AppData/Local/Temp/anonymous4078652558270429178webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js, line 11487: TypeError: this.server_ is undefined
+JavaScript error: chrome://fxdriver/content/server.js, line 38: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
 	... 67 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
-	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:123)
-	... 81 more
 </pre></div></td>
-<td>225</td>
-<td>com.email.scripts.PasswordReset@1fdf8b2</td></tr>
+<td>0</td>
+<td>com.email.scripts.PasswordReset@10d3d6c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.email.scripts.PasswordReset.testPasswordReset()'><b>testPasswordReset</b><br>Test class: com.email.scripts.PasswordReset</td>
+<td></td>
+<td>0</td>
+<td>com.email.scripts.PasswordReset@10d3d6c</td></tr>
 </table><p>
 </body>
 </html>

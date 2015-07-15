@@ -16,15 +16,30 @@ public class PasswordReset extends iREPSuperTestNG
 		iREPLoginPage loginPage = new iREPLoginPage(driver);
 		iREPPasswordResetProfile passwordReset = new iREPPasswordResetProfile(driver);
 
-		String iREPUname = DetailFieldValues.adminUname;
-		String iREPpassword = DetailFieldValues.adminPaswd;
-		String iREPeMAil = DetailFieldValues.UserEmail;
-		String eMailUname = DetailFieldValues.EmailUsername;
-		String eMailpassword = DetailFieldValues.EmailPWD;
-		String newPWD = DetailFieldValues.AllUserPWD;
 		
+//		String iREPUname = DetailFieldValues.adminUname;
+//		String iREPpassword = DetailFieldValues.adminPaswd;
+//		String iREPeMAil = DetailFieldValues.UserEmail;
+//		String eMailUname = DetailFieldValues.EmailUsername;
+//		String eMailpassword = DetailFieldValues.EmailPWD;
+//		String newPWD = DetailFieldValues.AllUserPWD;
+
 		String xlPath = "D:/SPURP/Test Data/Test Data_Demo.xls";
 		String sheetName = "Password Reset";
+		
+		String iREPUname = ExcelLib.getCellValue(xlPath,"Basic",1,0);
+		String iREPpassword = ExcelLib.getCellValue(xlPath,"Basic",1,1);
+		String iREPeMAil = ExcelLib.getCellValue(xlPath,"Basic",1,2);
+		String eMailUname = ExcelLib.getCellValue(xlPath,"Basic",1,3);
+		String eMailpassword = ExcelLib.getCellValue(xlPath,"Basic",1,4);
+		String newPWD = ExcelLib.getCellValue(xlPath,"Basic",1,5);
+	
+		System.out.println(iREPUname);
+		System.out.println(iREPpassword);
+		System.out.println(iREPeMAil);
+		System.out.println(eMailUname);
+		System.out.println(eMailpassword);
+		System.out.println(newPWD);
 
 		int rowCount = ExcelLib.getRowCount(xlPath, sheetName);
 
@@ -47,6 +62,6 @@ public class PasswordReset extends iREPSuperTestNG
 			System.out.println("=============================================");
 		}
 		
-		driver.quit();
+		//driver.quit();
 	}
 }
