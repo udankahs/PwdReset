@@ -24,7 +24,7 @@ public class PasswordReset extends iREPSuperTestNG
 //		String eMailpassword = DetailFieldValues.EmailPWD;
 //		String newPWD = DetailFieldValues.AllUserPWD;
 
-		String xlPath = "D:/SPURP/Test Data/Test Data_Demo.xls";
+		String xlPath = "src/Test Data_Demo.xls";
 		String sheetName = "Password Reset";
 		
 		String iREPUname = ExcelLib.getCellValue(xlPath,"Basic",1,0);

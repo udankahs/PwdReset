@@ -41,7 +41,10 @@ public class GotoUnreadMail {
 
 	@FindBy(xpath = "//a")
 	private WebElement Continue;
-
+	
+	@FindBy(xpath = "//div[contains(text(),'You cannot reuse this old password')]")
+	private WebElement Error;
+	
 	public GotoUnreadMail(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
@@ -81,15 +84,37 @@ public class GotoUnreadMail {
 			reEnterPWD.sendKeys(pwd);
 			Save.click();
 			Thread.sleep(6000);
-			System.out.println("Login succsfull. Password has been reset succesfully for "+ newUser);
+			if (Error.isDisplayed())
+			{
+				enterPWD.sendKeys("TemporaryPassword1");
+				reEnterPWD.sendKeys("TemporaryPassword1");
+				Save.click();
+			}
+			else
+			{
+				
+			}
+			
+			System.out.println("Login succesfull. Password has been reset succesfully for "+ newUser);
 		} 
 		else if (title.equals("salesforce.com - Change Password")) 
 		{
 			enterPWD.sendKeys(pwd);
 			reEnterPWD.sendKeys(pwd);
 			Save.click();
+			if (Error.isDisplayed())
+			{
+				enterPWD.sendKeys("TemporaryPassword1");
+				reEnterPWD.sendKeys("TemporaryPassword1");
+				Save.click();
+			}
+			else
+			{
+				
+			}
 			Thread.sleep(6000);
-			System.out.println("Login succsfull. Password has been reset succesfully for "+ newUser);
+			System.out.println("Login succesfull. Password has been reset succesfully for "+ newUser);
+			
 		}
 		return newUser;
 	}

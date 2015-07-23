@@ -13,7 +13,7 @@ public class iREPPasswordResetProfile
 	@FindBy(id="userNavLabel")
 	private WebElement userNavLabel;
 	
-	@FindBy(xpath="//div[@id='userNav-menuItems']/a[1]")
+	@FindBy(id="setupLink")
 	private WebElement Setup;
 	
 	@FindBy(id="Users_font")
@@ -66,7 +66,7 @@ public class iREPPasswordResetProfile
 		
 		if (title.equals("salesforce.com - Unlimited Edition")){
 		
-		userNavLabel.click();
+		//userNavLabel.click();
 		Setup.click();
 		ManageUsers.click();
 		Profiles.click();
